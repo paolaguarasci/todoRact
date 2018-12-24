@@ -1,32 +1,19 @@
 import React, { Component } from "react";
 import Elements from "./components/elements";
 import Add from "./components/add";
-import uuid from "uuid4";
+// import uuid from "uuid4";
 import "./App.css";
 
 class App extends Component {
   state = {
-    todoList: [
-      {
-        id: uuid(),
-        title: "fare la spesa",
-        desc: "pizza, birra, arachidi",
-        done: false
-      },
-      {
-        id: uuid(),
-        title: "mandare un msg a maria cristina",
-        desc: "sukah",
-        done: false
-      },
-      { id: uuid(), title: "studiare!!!!", desc: "oddio...", done: false }
-    ]
+    todoList: []
   };
   render() {
     return (
       <div className="App">
-        <Add addElement={this.handleAdd.bind(this)} />
+        <h1>Todo's</h1>
         <Elements todoList={this.state.todoList} onClick={this.handleClick} />
+        <Add addElement={this.handleAdd.bind(this)} />
       </div>
     );
   }
