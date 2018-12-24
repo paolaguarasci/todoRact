@@ -10,12 +10,6 @@ class Element extends Component {
       </li>
     );
   }
-  // formatDone = () => {
-  //   if (this.props.element.done) {
-  //     console.log("Done ", this.props.element.id);
-  //     return "done";
-  //   }
-  // };
 }
 
 export default Element;

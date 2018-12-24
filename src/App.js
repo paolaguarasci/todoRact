@@ -1,24 +1,25 @@
 import React, { Component } from "react";
 import Elements from "./components/elements";
 import Add from "./components/add";
+import uuid from "uuid4";
 import "./App.css";
 
 class App extends Component {
   state = {
     todoList: [
       {
-        id: 0,
+        id: uuid(),
         title: "fare la spesa",
         desc: "pizza, birra, arachidi",
         done: false
       },
       {
-        id: 2,
+        id: uuid(),
         title: "mandare un msg a maria cristina",
         desc: "sukah",
         done: false
       },
-      { id: 10, title: "studiare!!!!", desc: "oddio...", done: false }
+      { id: uuid(), title: "studiare!!!!", desc: "oddio...", done: false }
     ]
   };
   render() {
@@ -32,7 +33,7 @@ class App extends Component {
   handleAdd = el => {
     console.log("Aggiungo ", el);
     let todoList = [...this.state.todoList];
-    todoList.push(el);
+    todoList.unshift(el);
     this.setState({ todoList });
   };
   handleClick = el => {
