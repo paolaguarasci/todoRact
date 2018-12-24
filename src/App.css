@@ -7,8 +7,19 @@
   height: 40vmin;
 }
 
-.done {
-  color: red;
+.todos {
+  list-style: none;
+}
+
+.formAdd {
+  padding-top: 3rem;
+}
+
+label {
+  font-size: 10px;
+  color: gray;
+  margin-bottom: 0;
+  padding-bottom: 0;
 }
 
 .App-header {

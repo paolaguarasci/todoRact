@@ -29,9 +29,16 @@ class Add extends Component {
 
   render() {
     return (
-      <form onSubmit={this.handleSubmit.bind(this)}>
-        <input type="text" ref="title" placeholder="title" />
-        <input type="submit" value="Add" />
+      <form onSubmit={this.handleSubmit.bind(this)} className="formAdd">
+        <div className="input-group input-group-lg">
+          <input
+            id="task"
+            type="text"
+            ref="title"
+            placeholder="New Task"
+            className="form-control"
+          />
+        </div>
       </form>
     );
   }

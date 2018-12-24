@@ -10,8 +10,8 @@ class App extends Component {
   };
   render() {
     return (
-      <div className="App">
-        <h1>Todo's</h1>
+      <div className="App container">
+        <h1 className="m-2 display-1">Todo's</h1>
         <Elements todoList={this.state.todoList} onClick={this.handleClick} />
         <Add addElement={this.handleAdd.bind(this)} />
       </div>
